@@ -1,0 +1,22 @@
+#!/usr/bin/env perl
+use Mojolicious::Lite;
+
+plugin Minion => { SQLite => 'sqlite:jobs.db' };
+
+app->minion->add_task(
+    restart_server => sub {
+        my ($job, $server) = @_;
+        $server->{wait} ||= int(rand(4)+2);
+
+        $job->on(finished => sub {
+            my ($job, $result) = @_;
+            my $id = $job->id;
+            $job->app->log->info("Job ID $id finished.");
+        });
+
+        my $res = app->ua->get("http://localhost:3001/" . $server->{wait})->res;
+        $job->finish($res->json);
+    }
+);
+
+app->start;

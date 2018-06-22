@@ -1,0 +1,17 @@
+#!/usr/bin/env perl
+use Mojolicious::Lite;
+
+get '/:wait' => sub {
+    my $c = shift;
+    $c->render_later;
+
+    my $start = time;
+    Mojo::IOLoop->timer(
+        $c->param('wait') => sub {
+            $c->app->log->info("Server restarted (not really)");
+            $c->render(json => { status => "done", elapsed => (time - $start) });
+        }
+    );
+};
+
+app->start;

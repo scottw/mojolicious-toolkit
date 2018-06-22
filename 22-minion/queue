@@ -1,0 +1,15 @@
+#!/usr/bin/env perl
+use Mojolicious::Lite;
+
+plugin Minion => { SQLite => 'sqlite:jobs.db' };
+plugin 'Minion::Admin';
+
+post '/restart_server' => sub {
+    my $c   = shift;
+
+    my $id = $c->app->minion->enqueue(restart_server => [$c->req->json]);
+
+    $c->render(json => { message => "accepted", id => $id }, status => 202);
+};
+
+app->start;

@@ -1,0 +1,3 @@
+requires 'Minion';
+requires 'Minion::Backend::SQLite';
+requires 'Mojolicious::Plugin::Minion::Admin';

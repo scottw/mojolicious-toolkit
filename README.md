@@ -4,4 +4,4 @@ Mojolicious is more than a real-time web framework. It's a comprehensive toolkit
 
 Some code samples are taken or adapted from the Mojolicious documentation, while others are little applications I've written to further highlight some aspect of a module I found interesting.
 
-This code is part of a presentation ([slides](https://scottw.github.io/presentations/mojolicious-toolkit) and [2017 recording](https://www.youtube.com/watch?v=Hdf7ZgKoBLo).
+This code is part of a presentation ([slides](https://scottw.github.io/presentations/mojolicious-toolkit) and [2017 recording](https://www.youtube.com/watch?v=Hdf7ZgKoBLo)).

@@ -4,4 +4,4 @@
 
 Some code samples are taken or adapted from the [Mojolicious documentation](https://mojolicious.org/perldoc), while others are little applications I've written to further highlight some aspect of a module I found interesting.
 
-This code is part of a presentation: [slides](https://scottw.github.io/presentations/mojolicious-toolkit), [2017 recording](https://www.youtube.com/watch?v=Hdf7ZgKoBLo), and [June 2018 recording](https://youtu.be/oJKbiITSxXE).
+This code is part of a presentation: [slides](https://scottw.github.io/presentations/mojolicious-toolkit), [2017 recording](https://www.youtube.com/watch?v=Hdf7ZgKoBLo), and [June 2018 recording](https://www.youtube.com/watch?v=KzO1FbZIK_A).
